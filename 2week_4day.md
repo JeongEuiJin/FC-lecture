@@ -156,8 +156,34 @@ key - value 항목을 가지는 구조
 ##셋(set)
  - dict와 같으며 중복된 값이 존재할수없다
  - set('값' 또는 dict.파일)
- - 
 
+##if elif else(조건문)
 
+- 조건문
+if 조건1: <br>
+elif 조건2: <br>
+else: 조건 1,2 둘다 아닐경우
+
+- 조건 표현식<br>
+ 참일경우 표현 if 조건문 else 거짓일경우 표현
+ 
+ print('Good') if (true) else print('bad')
+ 
+- 중첩 조건 표현식<br>
+ print('good') if (true.1) if (true.2)...else print('bad')
+    
+ 
+
+##for (반복문)
+
+-for 항목 in 순환 객체
+-break 중단 할때
+-continue 건너띄고 계속 진행할때
+-else 
+
+- range() : 0부터 숫자만큼 범위 값이 주어짐
+- len(항목) : 몇개가있는지 구함
+- zip(a,b) : 	두개의 리스트들 중 짧은 리스트에 맞춰서 갯수가 정해짐
+- 
  
  
