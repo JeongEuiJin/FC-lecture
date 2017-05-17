@@ -26,7 +26,7 @@ diff로 unstaged에 있는 아직은 commit	하지 않은 것 중에서 수정�
 # GIT Log 보는 방법
  - 사용 방법 
  - git log --oneline --graph --all 하게되면 트리 형식으로 보여주게된다
-
+ - 
   
 
 
