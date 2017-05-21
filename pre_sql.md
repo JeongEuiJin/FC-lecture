@@ -99,28 +99,62 @@ Mysql,sql server , access...등등
 ##count, avg , sum
 
 ##like
+ - where 절에서 사용
+ - where () like 조건넣어주면 검색
 
 ##wildcards
+ - where절 이하 like와 함께 사용
+ - % _ [] [^ ] [!  ]
+ - _ : 임의 문자하나
+ - [] : 집합 범위
+ - [^ ] , [! ] : 매치 되지 않는
 
 ##in
+ - where 절에서 사용
+ - where ( ) in (value1, value2..)
+ - or?랑 비슷해보임
 
 ##between
+ - where 절에서 사용
+ - 범위 중에서 값을 선택
+ - where ( ) between ( ) and ( )
+ - 두개 사이 값중의 레코드 선택
+ - not between 사용가능 사이로 시작하지 않는 값들 선택
+ 
 
 ##aliases
+ - as 테이블 칼럼네임을 바꿔서 사용
+ - select ( ) as () from (table)
+ - select ( ) from(table)
+ - 조합을 해서 사용할수도있다.
+ - 명칭 지정할수있다
 
 ##joins
+ - 두개 이상의 테이블에서 공통의 컬럼을 통하여 데이타를 가져올때 사용한다.
+ - on = where
 
 ##inner join
+ - join의 일반적인 형태
 
 ##left join
+ - left 레이블 과 공통분모를 다가져온다
 
 ##right join
+ - right 레이블 과 공통분모를 다 가져온다
+ - left와 반대개념이다
 
 ##full join
+ - left , right join을 다 합친것
+ - * 과 무슨차이가있지 ;;??
+ - 다 가져와서 조인시킨다는의미로보임
 
 ##self join
 
 ##union
+ - 각각의 컬럼의 수가 같아야된다 
+ - 칼람의 데이타타입이 같아야된다
+ - select 구문으로 된것들을 union으로 묶는다
+ - 중복된값을 제외하고 가져오고 모든값을 가져오기위해서는 all을 붙이면된다.
 
 ##group by
 
@@ -130,38 +164,80 @@ Mysql,sql server , access...등등
 
 ##any all
 
-##select info
+##select into
+ - 하나의 테이블로 부터 다른 테이블을 만들때 사용
+ - select () into (new table) from (table)
+ - into () in 백업복사할떄 사용
 
 ##insert into select
-
+ - 존재하는 테이블에서 데이타를 가져와서 기존 테이블에 추가한다
+ - insert into () select * from (table)
+ - 
 ##comments
 
 
 ##create db
+ - create database ();
 
 ##drop db
+ - 
 
 ##create table
-
+ - create table (
+ - 컬럼 네임 ,data_typ
+ - )
+ - create table
+ - ( personID int,
+ - lastname vachar(255),...)
+ - insert into를 통하여 값을 입력
+ 
 ##drop table
 
 ##alter table
 
 ##constraints
+ - 제약사항 create table 만들때 지정할수있음
+  - not null : 입력을 반드시 해야댐
+  - unique : 중복되는 값이 있으면안될때
+  - primary key : 레코드 한컬럼만 지정
+  - foreign key : 가져오는 값
+  
 
 ##not null
-
+ - create table 할 떄 사용
+ - 레코드 만들 때 not null을 사용하여 만들수있다
+ - 사용 시 반드시 값이 들어가야된다
 ##unique
+ - 유일한 값
+ - 하나이상의 칼럼에 지정가능
+ - atlter talbe 기존에 있던 테이블에 넣을때
+ - add unique(ID)
+ - 제거할때  - drop index (ID)
 
 ##primary key
+ - null 값을 가질수없다
+ - 테이블당 하나의 키이다
+ - 테이블을 생성시 컬럼에 primary key 설정
+ - 기존테이블에 추가 할 떄 add primary key(id)
+ - 삭제할 때 drop primary key(id)
 
 ##foreign key
+ - 외래키 다른 테이블의 primary key와 연결된다
+
 
 ##check
+ - table만들때 컬럼 체크를 사용할수있다
+ - check(ID >0)조건을 걸수있다
 
 ##default
+ - 컬럼에 들어갈것을 기본으로 정해준다
+ - 테이블 만들 때 컬럼에 default값을 지정
 
 ##index
+ - 색인 찾기위한 용도
+ - 업데이트를 할 때 느려질수있다
+ - create index() on (table) (index)
+ - 검색이 자주일어나는 곳에 지정
 
 ##auto increment
 
