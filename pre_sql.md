@@ -180,7 +180,7 @@ Mysql,sql server , access...등등
  - create database ();
 
 ##drop db
- - 
+ - 이미 만들어진 drop database를 사용하면 제거가된다
 
 ##create table
  - create table (
@@ -192,8 +192,16 @@ Mysql,sql server , access...등등
  - insert into를 통하여 값을 입력
  
 ##drop table
+ - 테이블을 지울때 사용
+ - drop table
+ - truncate table 테이블을 지우고 다시 똑같은 구조로 만들때 사용
 
 ##alter table
+ - 이미 만들어진 테이블 내에서 수정할 떄 사용
+ - alter table(table)
+ - add column_name datatype
+ - drop column (name)
+ - 
 
 ##constraints
  - 제약사항 create table 만들때 지정할수있음
@@ -240,8 +248,16 @@ Mysql,sql server , access...등등
  - 검색이 자주일어나는 곳에 지정
 
 ##auto increment
+ - 컬럼에 지정하는것으로 유일한값으로 지정하여 숫자를 넣어준다
 
 ##views
+ - 결과 가상테이블
+ - 모든 select 사용가능하다
+ - create view (table) as select ....
+ - 업데이트 제거
+  - create or replace view () as ()
+  - drow view ()
+ 
 
 ##injection
  - sql 구문을 활용하여 데이타를 수정하는 것
@@ -257,11 +273,28 @@ Mysql,sql server , access...등등
 
 ##oracle functions
 
-##dates
+##dates function
+ - now() : 현재 날짜와 시간을 반환
+ - curdate() : 현재 날짜 년 월 일
+ - curtime() : 현재 시간 시 분 초
+ - date() : date /time 날짜 부분만 추출한다
+ - extract(unit date) : 한부분씩만 추출하고싶을 때
+ - date_add() : 주어진 날짜에서 추가
+ - date_sub() : 빼주는것
 
 ##null functions
+ - isnull() : null값을 특정값으로 대체
+ - nvl() :
+ - ifnull() :
+ - coalesce() :
 
 ##operators
+ - & : and
+ - | : or
+ - ^ : COR
+ - = : 같다
+ - <> : 같지않다.
+ - 
 
 ##data type
 
