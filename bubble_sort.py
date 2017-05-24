@@ -8,9 +8,9 @@ def bubble_sort(bubble_list):
     bubble_len = len(bubble_list) -1
     for i in range(bubble_len):
         print(i)
-        for j in range(bubble_len-1):
+        for j in range(bubble_len-i):
             if bubble_list[j] > bubble_list[j+1]:
-                bubble_list[j],bubble_list[j+1] = bubble_sort(j+1),bubble_list[j]
+                bubble_list[j],bubble_list[j+1] = bubble_sort[j+1],bubble_list[j]
     print(bubble_list)
 
 
